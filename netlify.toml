@@ -1,0 +1,9 @@
+# Netlify settings: the site is plain HTML, so there is no build step.
+[build]
+  publish = "."
+
+# Images rarely change, so let browsers cache them for a week.
+[[headers]]
+  for = "/img/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
