@@ -342,7 +342,7 @@ h2 .serif{color:var(--cobalt)}
 }
 
 /* meet the team */
-.people{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+.people{display:grid;grid-template-columns:repeat(6,1fr);gap:16px}
 .person{min-width:0}
 .person-ph{position:relative;aspect-ratio:4/5;border-radius:var(--r-lg);overflow:hidden;background:var(--night);box-shadow:var(--lift-2)}
 .person-ph img{width:100%;height:100%;object-fit:cover;transition:filter .8s var(--ease),transform 1.2s var(--ease)}
@@ -354,9 +354,8 @@ h2 .serif{color:var(--cobalt)}
 .person h4{font-size:19px}
 .person figcaption span{font-size:14px;color:var(--ink-2)}
 .person figcaption small{font-family:var(--f-mono);font-size:11px;color:var(--muted)}
-@media (max-width:1000px){.people{grid-template-columns:repeat(3,1fr)}.person--lead{grid-column:span 2}.person--lead .person-ph{aspect-ratio:auto;height:calc(100% - 0px);min-height:100%}}
-@media (max-width:1000px){.person--lead{display:flex;flex-direction:column}.person--lead .person-ph{flex:1;min-height:320px}.person--lead .person-ph img{object-position:50% 25%}}
-@media (max-width:640px){.people{grid-template-columns:1fr 1fr}.person--lead{grid-column:1/-1}.person--lead .person-ph{min-height:0;aspect-ratio:1}}
+@media (max-width:1100px){.people{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:640px){.people{grid-template-columns:1fr 1fr;gap:12px}.person h4{font-size:17px}}
 
 /* team roster */
 .xp{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(40px,6vw,96px);align-items:start}
@@ -697,6 +696,7 @@ h2 .serif{color:var(--cobalt)}
         <img class="face" src="img/avatar-olaife.webp" alt="" width="160" height="160">
         <img class="face" src="img/avatar-grace.webp" alt="" width="160" height="160">
         <img class="face" src="img/avatar-joel.webp" alt="" width="160" height="160">
+        <img class="face" src="img/avatar-ekobay.webp" alt="" width="160" height="160">
       </span>
       <span>Hi, we're <b>Pioneers</b>. A full-service digital marketing agency.</span>
     </p>
@@ -922,6 +922,7 @@ h2 .serif{color:var(--cobalt)}
           <span class="case-num">AI automation · Case studies coming soon</span>
           <h3>Busywork that runs itself.</h3>
           <p>AI automation case studies are on the way. Book a call and we will show you live workflows that qualify leads, answer customers and update CRMs without anyone lifting a finger.</p>
+          <span class="who case-by"><span><img src="img/avatar-ekobay.webp" alt="" width="160" height="160" loading="lazy">Led by Ekobay "Ace" Emmanuel</span></span>
           <div class="case-foot" style="margin-top:32px"><a class="btn btn--cobalt" data-book href="#contact">Ask for examples on a call <span class="ic"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 12 12 4M5.5 4H12v6.5"/></svg><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 12 12 4M5.5 4H12v6.5"/></svg></span></a></div>
         </div>
         <div class="case-media" style="--c:var(--cobalt-wash)">
@@ -1044,6 +1045,10 @@ h2 .serif{color:var(--cobalt)}
         <div class="person-ph"><img src="img/team-joel.webp" alt="Portrait of Joel Onasanya" width="720" height="900" loading="lazy"><span class="sticker person-nick">"Joel"</span></div>
         <figcaption><h4>Joel Onasanya</h4><span>App Developer</span></figcaption>
       </figure>
+      <figure class="person" data-reveal>
+        <div class="person-ph"><img src="img/team-ekobay.webp" alt="Portrait of Ekobay Emmanuel" width="720" height="900" loading="lazy"><span class="sticker person-nick">"Ace"</span></div>
+        <figcaption><h4>Ekobay Emmanuel</h4><span>AI Automation Lead</span></figcaption>
+      </figure>
     </div>
   </div>
 </section>
@@ -1062,7 +1067,7 @@ h2 .serif{color:var(--cobalt)}
       <li data-reveal><h4>Email Marketers <em>· Lifecycle</em></h4><span class="when">Klaviyo · Mailchimp · HubSpot</span><p>Welcome flows, abandoned-cart sequences and newsletters that bring customers back without more ad spend.</p><span class="who"><span><img src="img/avatar-joseph.webp" alt="" width="160" height="160" loading="lazy">Joseph "Joe" Michael</span></span></li>
       <li data-reveal><h4>Social Media Marketers <em>· Social</em></h4><span class="when">Instagram · TikTok · LinkedIn</span><p>Content calendars, short-form video, community management and paid campaigns on the platforms your buyers use.</p><span class="who"><span><img src="img/avatar-olaife.webp" alt="" width="160" height="160" loading="lazy">Olaife "Ola-Shine" Adebisi</span><span><img src="img/avatar-grace.webp" alt="" width="160" height="160" loading="lazy">Grace "Sky"</span></span></li>
       <li data-reveal><h4>SEO Experts <em>· Search</em></h4><span class="when">Technical · Local · Content</span><p>Site audits, keyword plans, content and local SEO that put you on Google and in AI answers.</p></li>
-      <li data-reveal><h4>AI Automation Experts <em>· Automation</em></h4><span class="when">Zapier · Make · n8n · OpenAI</span><p>Workflows, AI chatbots and agents that capture leads, answer customers and keep your CRM up to date around the clock.</p></li>
+      <li data-reveal><h4>AI Automation Experts <em>· Automation</em></h4><span class="when">Zapier · Make · n8n · OpenAI</span><p>Workflows, AI chatbots and agents that capture leads, answer customers and keep your CRM up to date around the clock.</p><span class="who"><span><img src="img/avatar-ekobay.webp" alt="" width="160" height="160" loading="lazy">Ekobay "Ace" Emmanuel</span></span></li>
       <li data-reveal><h4>Project Leads <em>· Delivery</em></h4><span class="when">Your one contact</span><p>One person who owns your timeline, joins every call and makes sure all six teams pull in the same direction.</p></li>
       <li data-reveal><h4>Designers & Copywriters <em>· Creative</em></h4><span class="when">Brand · Visuals · Words</span><p>The graphics, videos and copy that every channel needs, kept on-brand from the app icon to the newsletter.</p></li>
     </ul>
