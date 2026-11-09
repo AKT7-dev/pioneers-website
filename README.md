@@ -1,11 +1,12 @@
-# Pioneers website
+# Adebayo Popoola portfolio
 
-The website for Pioneers, a digital marketing agency with app developers, website designers, email marketers, social media marketers, SEO experts and AI automation experts.
+The personal portfolio of Adebayo "Brainfield" Popoola: website design on Wix, Framer, Figma, WordPress and Squarespace, plus CRM and marketing automation in GoHighLevel, ClickFunnels, Kajabi and Systeme.io.
 
 ## What's in here
 
 - `index.html`: the whole site (layout, styles and scripts)
-- `img/`: logo layers, team photos, case-study screenshots and social posts
+- `img/`: portrait, case-study screenshots and video posters
+- `video/`: client video testimonials
 - `netlify.toml`: hosting settings for Netlify
 
 ## How updates go live
