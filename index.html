@@ -169,6 +169,7 @@ h2 .serif{color:var(--cobalt)}
 .fan-card .bar{height:22px;display:flex;align-items:center;gap:5px;padding:0 10px;background:#F4F3EF;border-bottom:1px solid var(--line)}
 .fan-card .bar i{width:7px;height:7px;border-radius:50%;background:#D9D6CE}
 .fan-card .screen{height:calc(100% - 22px);overflow:hidden}
+.fan-card .screen>img{width:100%;height:100%;object-fit:cover;object-position:top}
 .fan-card .tag{position:absolute;left:10px;bottom:10px;padding:5px 10px;border-radius:var(--r-pill);font-size:12px;font-weight:500;background:rgba(15,15,13,.78);color:#fff;opacity:0;transform:translateY(6px);transition:.5s var(--ease)}
 .fan-card:hover .tag{opacity:1;transform:none}
 .fan-card:nth-child(1){transform:translateX(-50%) translateX(-118%) translateY(56px) rotate(-11deg);z-index:1}
@@ -232,6 +233,9 @@ h2 .serif{color:var(--cobalt)}
 .case{position:sticky;top:96px;display:grid;grid-template-columns:1fr 1.25fr;min-height:min(640px,78vh);border-radius:var(--r-xl);overflow:hidden;background:var(--white);box-shadow:var(--lift-2),inset 0 0 0 1px var(--line)}
 .case:nth-child(2){top:116px}
 .case:nth-child(3){top:136px}
+.case:nth-child(4){top:156px}
+.case:nth-child(5){top:176px}
+.browser .screen>img{width:100%;height:100%;object-fit:cover;object-position:top;max-width:none}
 .case-body{padding:clamp(28px,4vw,56px);display:flex;flex-direction:column;min-width:0}
 .case-num{font-family:var(--f-mono);font-size:13px;color:var(--muted);letter-spacing:.08em}
 .case h3{margin:18px 0 16px;font-size:clamp(32px,3.6vw,54px);letter-spacing:-.035em;line-height:1}
@@ -445,8 +449,11 @@ h2 .serif{color:var(--cobalt)}
 .work-meta .chip{flex:none;background:var(--white);box-shadow:inset 0 0 0 1px var(--line)}
 .work-grid--3 .work,.work-grid--3 .work:nth-child(1),.work-grid--3 .work:nth-child(2){grid-column:span 4}
 .work-grid--3 .work-frame{aspect-ratio:3/4}
+.work-grid--5 .work:nth-child(-n+2){grid-column:span 6}
+.work-grid--5 .work:nth-child(-n+2) .work-frame{aspect-ratio:4/3}
 @media (max-width:900px){.work,.work:nth-child(1),.work:nth-child(2),.work-grid--3 .work,.work-grid--3 .work:nth-child(1),.work-grid--3 .work:nth-child(2){grid-column:span 6}}
 @media (max-width:600px){.work,.work:nth-child(1),.work:nth-child(2),.work-grid--3 .work,.work-grid--3 .work:nth-child(1),.work-grid--3 .work:nth-child(2){grid-column:span 12}.work-frame::after{content:"Tap to scroll";opacity:1;transform:none}}
+@media (min-width:601px) and (max-width:900px){.work-grid--5 .work:last-child{grid-column:span 12}.work-grid--5 .work:last-child .work-frame{aspect-ratio:16/9}}
 
 /* regions */
 .regions{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
@@ -703,11 +710,11 @@ h2 .serif{color:var(--cobalt)}
     </div>
   </div>
   <div class="fan" aria-hidden="true">
-    <div class="fan-card"><div class="bar"><i></i><i></i><i></i></div><div class="screen" data-mock="site-d"></div><span class="tag">Website design</span></div>
+    <div class="fan-card"><div class="bar"><i></i><i></i><i></i></div><div class="screen"><img src="img/nowpools-top.webp" alt="" width="768" height="480"></div><span class="tag">Now Pools</span></div>
     <div class="fan-card"><div class="bar"><i></i><i></i><i></i></div><div class="screen" data-mock="rg"></div><span class="tag">RentGuardus</span></div>
     <div class="fan-card"><div class="bar"><i></i><i></i><i></i></div><div class="screen" data-mock="biz"></div><span class="tag">AI BizBox</span></div>
     <div class="fan-card"><div class="bar"><i></i><i></i><i></i></div><div class="screen" data-mock="sw"></div><span class="tag">Streetwise Tips</span></div>
-    <div class="fan-card"><div class="bar"><i></i><i></i><i></i></div><div class="screen" data-mock="auto-a"></div><span class="tag">CRM automation</span></div>
+    <div class="fan-card"><div class="bar"><i></i><i></i><i></i></div><div class="screen"><img src="img/sideb-top.webp" alt="" width="768" height="480"></div><span class="tag">Side B</span></div>
     <div class="float-note float-note--a" data-parallax="-.06"><span class="fi"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="6" height="6" rx="1.5"/><rect x="11" y="3" width="6" height="6" rx="1.5"/><rect x="3" y="11" width="6" height="6" rx="1.5"/><rect x="11" y="11" width="6" height="6" rx="1.5"/></svg></span><span><b>9 platforms</b>I design &amp; build on</span></div>
     <div class="float-note float-note--b" data-parallax="-.1"><span class="fi"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="10" cy="10" r="7"/><path d="M10 6v4l3 2"/></svg></span><span><b>Site + system</b>built by one person</span></div>
   </div>
@@ -748,13 +755,13 @@ h2 .serif{color:var(--cobalt)}
     <div class="sec-head">
       <div>
         <span class="eyebrow" data-reveal>Selected work · 2026</span>
-        <h2 data-reveal>Three projects, told <span class="serif">properly.</span></h2>
+        <h2 data-reveal>Five projects, told <span class="serif">properly.</span></h2>
       </div>
-      <p data-reveal>A rental-protection platform in Texas, an AI business-in-a-box and a community of insiders sharing tips. Different worlds, same job: make a stranger trust them fast.</p>
+      <p data-reveal>A rental-protection platform, an AI business-in-a-box, an insiders' tips club, a pool subscription company and a record-shop coffee bar. Different worlds, same job: make a stranger trust them fast.</p>
     </div>
 
     <div class="tabs" role="tablist" aria-label="Case studies by service">
-      <button class="tab" role="tab" id="tab-web" aria-controls="panel-web" aria-selected="true">Website design <span>3</span></button>
+      <button class="tab" role="tab" id="tab-web" aria-controls="panel-web" aria-selected="true">Website design <span>5</span></button>
       <button class="tab" role="tab" id="tab-crm" aria-controls="panel-crm" aria-selected="false" tabindex="-1">CRM &amp; automation</button>
     </div>
 
@@ -800,6 +807,32 @@ h2 .serif{color:var(--cobalt)}
         <div class="case-media" style="--c:#E9D9C6">
           <div class="browser"><div class="browser-bar"><i></i><i></i><i></i><span class="url">streetwiseintelligence.com</span></div><div class="screen" data-mock="sw"></div></div>
           <div class="phone"><div class="screen" data-mock="sw-app"></div></div>
+        </div>
+      </article>
+      <article class="case">
+        <div class="case-body">
+          <span class="case-num">04 / Website design · Pool &amp; spa subscriptions</span>
+          <h3>Now Pools</h3>
+          <p>The original on-demand pool and spa company, selling all-inclusive subscriptions instead of a five-figure install. The site walks families from "bare yard to backyard oasis": a four-step sign-up, a gallery of pools and spas, real customer reviews and a side-by-side comparison with in-ground and DIY pools.</p>
+          <div class="case-chips"><span class="chip">Web design</span><span class="chip">Subscription funnel</span><span class="chip">Lead capture</span></div>
+          <div class="case-stats"><div><b>4</b><span>steps from sign-up to swimming, shown on one row</span></div><div><b>3</b><span>ways to get a pool compared side by side</span></div></div>
+          <div class="case-foot"><a class="link" href="https://nowpools.com" target="_blank" rel="noopener">Visit the live site <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 12 12 4M5.5 4H12v6.5"/></svg></a></div>
+        </div>
+        <div class="case-media" style="--c:#CFE6F5">
+          <div class="browser"><div class="browser-bar"><i></i><i></i><i></i><span class="url">nowpools.com</span></div><div class="screen"><img src="img/nowpools-top.webp" alt="Now Pools homepage: Your Outdoor Oasis Anytime" width="768" height="480" loading="lazy"></div></div>
+        </div>
+      </article>
+      <article class="case">
+        <div class="case-body">
+          <span class="case-num">05 / Website design · Record shop &amp; coffee bar</span>
+          <h3>Side B</h3>
+          <p>A coffee counter tucked inside a record shop. The site leans into the vinyl idea: a moody, type-led layout, "First, the records. Then, the coffee." up top, and the coffee shelf presented as three record sleeves you can pick from.</p>
+          <div class="case-chips"><span class="chip">Web design</span><span class="chip">Brand concept</span><span class="chip">One-page site</span></div>
+          <div class="case-stats"><div><b>3</b><span>coffees styled as record sleeves: House blend, Long play, Deep cut</span></div><div><b>1</b><span>page, read top to bottom like an album side</span></div></div>
+          <div class="case-foot"><a class="link" href="https://needle-and-bean.lovable.app/#coffee" target="_blank" rel="noopener">Visit the live site <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 12 12 4M5.5 4H12v6.5"/></svg></a></div>
+        </div>
+        <div class="case-media" style="--c:#3A2E28">
+          <div class="browser"><div class="browser-bar"><i></i><i></i><i></i><span class="url">needle-and-bean.lovable.app</span></div><div class="screen"><img src="img/sideb-top.webp" alt="Side B homepage: First, the records. Then, the coffee." width="768" height="480" loading="lazy"></div></div>
         </div>
       </article>
     </div>
@@ -934,9 +967,11 @@ h2 .serif{color:var(--cobalt)}
         <span class="eyebrow" data-reveal>Full-page tour</span>
         <h2 data-reveal>Hover to scroll the <span class="serif">whole page.</span></h2>
       </div>
-      <p data-reveal>Every page of the three sites above, top to bottom. Hover over a frame, or tap it on your phone, to scroll through the whole thing.</p>
+      <p data-reveal>Every page of the five sites above, top to bottom. Hover over a frame, or tap it on your phone, to scroll through the whole thing.</p>
     </div>
-    <div class="work-grid work-grid--3">
+    <div class="work-grid work-grid--3 work-grid--5">
+      <a class="work" href="https://nowpools.com" target="_blank" rel="noopener"><div class="work-frame"><img class="long" src="img/nowpools.webp" alt="Full homepage of the Now Pools website" width="384" height="2000" loading="lazy"></div><div class="work-meta"><div><h4>Now Pools</h4><p>On-demand pool and spa subscriptions</p></div><span class="chip">Home &amp; leisure</span></div></a>
+      <a class="work" href="https://needle-and-bean.lovable.app/#coffee" target="_blank" rel="noopener"><div class="work-frame"><img class="long" src="img/sideb.webp" alt="Full homepage of the Side B website" width="757" height="2000" loading="lazy"></div><div class="work-meta"><div><h4>Side B</h4><p>Coffee counter inside a record shop</p></div><span class="chip">Hospitality</span></div></a>
       <a class="work" data-site="rentguardus" href="#contact"><div class="work-frame"><img class="long" src="img/rentguardus.webp" alt="Full homepage of the RentGuardus website" width="186" height="2000" loading="lazy"></div><div class="work-meta"><div><h4>RentGuardus</h4><p>Rent guarantee for landlords, credit building for renters</p></div><span class="chip">PropTech</span></div></a>
       <a class="work" href="https://aibizbox.ai" target="_blank" rel="noopener"><div class="work-frame"><img class="long" src="img/aibizbox.webp" alt="Full homepage of the AI BizBox website" width="372" height="2000" loading="lazy"></div><div class="work-meta"><div><h4>AI BizBox</h4><p>Website, CRM, calendar and follow-up in one system</p></div><span class="chip">SaaS</span></div></a>
       <a class="work" href="https://streetwiseintelligence.com/streetwise-tips/" target="_blank" rel="noopener"><div class="work-frame"><img class="long" src="img/streetwise-tips.webp" alt="Full homepage of the Streetwise Tips community" width="626" height="2000" loading="lazy"></div><div class="work-meta"><div><h4>Streetwise Tips</h4><p>Insider tips library with voting and video</p></div><span class="chip">Community</span></div></a>
